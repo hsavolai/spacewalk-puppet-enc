@@ -12,12 +12,12 @@ SUMMARY
 
 The tool is divided in two parts: 
 
-- The sync tool is used to retrieve class information from the Spacewalk server.
+- The sync tool (sync.sh) is used to retrieve class information from the Spacewalk server.
 The information is stored in text file, which acts as a cache for ENC. This 
 should be scheduled run in cron jobs as frequently as needed. Practical value is
 probably every 2-3 minutes.
 
-- The ENC tool is configured to Puppet Master. It reads the classification 
+- The ENC tool (enc.sh) is configured to Puppet Master. It reads the classification 
 information and turns it to yaml which is understood by the Puppet server.
 
 Version requirements:
