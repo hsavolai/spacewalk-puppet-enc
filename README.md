@@ -2,11 +2,13 @@ Copyright 2012 Harri Savolainen
 (GPLv3)
 
 SPACEWALK-PUPPET-ENC
+--
 
 This is ENC (External Node Classifier) for integrating two great systems,
 Spacewalk Server (or RHN Satellite) and the Puppet configuration management server.
 
-SUMMARY:
+SUMMARY
+--
 
 The tool is divided in two parts: 
 
@@ -29,24 +31,26 @@ USAGE
 
 - Place the scripts on puppet master server, e.g. to directory /opt/puppet/spacewalk-enc.
 
-In enc.sh, configure parameters
-SW_SYNC_PATH
+In enc.sh, configure parameters  
+SW_SYNC_PATH  
 
-In sync.sh, configure parameters
-SW_SYNC_PATH
-SPACEWALK_USERNAME
-SPACEWALK_PASSWORD
-SPACEWALK_URL
+In sync.sh, configure parameters  
+SW_SYNC_PATH  
+SPACEWALK_USERNAME  
+SPACEWALK_PASSWORD  
+SPACEWALK_URL  
 
 - Configuring puppet master. 
 
 Add the following lines to puppet master configuration under [master].
 
-[master]
-    ...
-    node_terminus = exec
-    external_node = /opt/puppet/spacewalk-enc/enc.sh
-    external_nodes = /opt/puppet/spacewalk-enc/enc.sh
+
+    [master]
+     ...
+     node_terminus = exec
+     external_node = /opt/puppet/spacewalk-enc/enc.sh
+     external_nodes = /opt/puppet/spacewalk-enc/enc.sh
+     ...
 
 - Configuring Spacewalk Server / RHN Satellite Server:
 
